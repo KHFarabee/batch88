@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/output.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Forum86</title>
+  </head>
+  <body class="bg-slate-200 dark:bg-gray-900">
+    <div class="body relative">
+      <!--
+      #######################################################
+      #######################################################
+      #######################################################
+      HEADER SECTION STARTS
+      #######################################################
+      #######################################################
+      #######################################################
+      -->
+      <header class="bg-gray-100 dark:bg-slate-800 shadow-sm fixed top-0 left-0 w-full z-10">
+        <div class="flex justify-between items-center px-4 h-20">
+          <div class="flex gap-3 items-center">
+            <button class="lg:hidden text-gray-600 dark:text-gray-300 font-bold text-lg mobile-nav-switch">
+              <!-- <i class="fa-solid fa-bars"></i> -->
+              <!-- OPEN SIDE -->
+              <span title="Show Menu" class="mobile-nav-open-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+              </span>
+              <!-- CLOSE SIDE -->
+              <span title="Hide Menu" class="mobile-nav-close-btn hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-7 h-7">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </span>
+            </button>
+            <a href="./index.html"><img src="./assets/img/logo/FORUM86.png" class="h-12" alt="" /></a>
+          </div>
+          <nav class="hidden lg:block">
+            <ul class="main-nav-ul text-gray-500 dark:text-gray-300 flex gap-4">
+              <li>
+                <a href="./index.html" class="main-nav-link-active">
+                  <span>
+                    <i class="fa-solid fa-house"></i>
+                  </span>
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="./constitution.html" class="main-nav-link">
+                  <span>
+                    <i class="fa-solid fa-book"></i>
+                  </span>
+                  <span>Constitution</span>
+                </a>
+              </li>
+              <li class="main-nav-link relative" x-data="{open:false}" @mouseleave="open=false">
+                <a href="#" class="relative" @mouseover="open=true">
+                  <span> <i class="fa-solid fa-people-group"></i> </span>
+                  <span>Executive Committee</span>
+                </a>
+                <ul x-show="open" class="absolute top-full w-52 mt-1 normal-case rounded-md bg-gray-100 text-gray-500 dark:text-gray-300 dark:bg-gray-800 text-xs border border-gray-200 dark:border-gray-700">
+                  <li><a href="./present-executive-committee.html" class="main-nav-dropdown-link border-b border-gray-200 dark:border-gray-700">Present Executive Committee</a></li>
+                  <li><a href="./ex-executive-committee.html" class="main-nav-dropdown-link">Ex Executive Committee</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="./activities.html" class="main-nav-link">
+                  <span>
+                    <i class="fa-solid fa-square-person-confined"></i>
+                  </span>
+                  <span>Activities</span>
+                </a>
+              </li>
+              <li>
+                <a href="./reunions.html" class="main-nav-link">
+                  <span>
+                    <i class="fa-solid fa-handshake"></i>
+                  </span>
+                  <span>Reunions</span>
+                </a>
+              </li>
+              <li>
+                <a href="./souvenir.html" class="main-nav-link">
+                  <span>
+                    <i class="fa-solid fa-gifts"></i>
+                  </span>
+                  <span>Souvenir</span>
+                </a>
+              </li>
+              <li>
+                <a href="./forum86usa.html" class="main-nav-link">
+                  <span>
+                    <i class="fa-solid fa-flag-usa"></i>
+                  </span>
+                  <span>Forum 86 USA</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <button class="dark-mode-switch border-2 border-purple-600 dark:bg-purple-600 h-8 w-8 flex items-center justify-center rounded-lg">
+            <span title="Dark Mode: On" class="dark-mode hidden dark:block">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 01.818.162z" clip-rule="evenodd" />
+              </svg>
+            </span>
+            <span title="Dark Mode: Off" class="light-mode block dark:hidden text-purple-600">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path
+                  d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.166a.75.75 0 00-1.06-1.06l-1.591 1.59a.75.75 0 101.06 1.061l1.591-1.59zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.834 18.894a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 10-1.061 1.06l1.59 1.591zM12 18a.75.75 0 01.75.75V21a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM7.758 17.303a.75.75 0 00-1.061-1.06l-1.591 1.59a.75.75 0 001.06 1.061l1.591-1.59zM6 12a.75.75 0 01-.75.75H3a.75.75 0 010-1.5h2.25A.75.75 0 016 12zM6.697 7.757a.75.75 0 001.06-1.06l-1.59-1.591a.75.75 0 00-1.061 1.06l1.59 1.591z"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </header>
+      <!-- !!!!!!!!!!!!!!!!! -->
+      <!-- MOBILE NAV STARTS -->
+      <div class="lg:hidden mobile-nav bg-gray-100 dark:bg-slate-800 pb-5 h-full overflow-y-auto w-64 fixed top-20 left-0 shadow-sm mobile-nav -translate-x-full transition-all ease-in-out duration-500">
+        <ul class="text-sm text-gray-500 dark:text-gray-300 mb-6">
+          <li class="border-t-2 side-nav-list-border">
+            <a href="./index.html" class="side-nav-link-active">
+              <span>
+                <i class="fa-solid fa-house"></i>
+              </span>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="side-nav-list-border">
+            <a href="./constitution.html" class="side-nav-link">
+              <span>
+                <i class="fa-solid fa-book"></i>
+              </span>
+              <span>Constitution</span>
+            </a>
+          </li>
+          <li class="side-nav-list-border">
+            <div x-data="{open:false}">
+              <button x-on:click="open=!open" class="side-nav-link">
+                <span>
+                  <i class="fa-solid fa-people-group"></i>
+                </span>
+                <span>Executive Committee</span>
+              </button>
+              <ul x-show="open" class="pl-6 pb-4">
+                <li><a href="./present-executive-committee.html" class="side-nav-sub-link text-xs">- Present Executive Committee</a></li>
+                <li><a href="./ex-executive-committee.html" class="side-nav-sub-link text-xs">- Ex Executive Committee</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="side-nav-list-border">
+            <a href="./activities.html" class="side-nav-link">
+              <span>
+                <i class="fa-solid fa-square-person-confined"></i>
+              </span>
+              <span>Activities</span>
+            </a>
+          </li>
+          <li class="side-nav-list-border">
+            <a href="./reunions.html" class="side-nav-link">
+              <span>
+                <i class="fa-solid fa-handshake"></i>
+              </span>
+              <span>Reunions</span>
+            </a>
+          </li>
+          <li class="side-nav-list-border">
+            <a href="./souvenir.html" class="side-nav-link">
+              <span>
+                <i class="fa-solid fa-gifts"></i>
+              </span>
+              <span>Souvenir</span>
+            </a>
+          </li>
+          <li class="side-nav-list-border">
+            <a href="./forum86usa.html" class="side-nav-link">
+              <span>
+                <i class="fa-solid fa-flag-usa"></i>
+              </span>
+              <span>Forum 86 USA</span>
+            </a>
+          </li>
+        </ul>
+        <div class="px-4 mb-20">
+          <div class="bg-green-800 p-3 border-2 border-gray-300 dark:border-gray-700 rounded-lg">
+            <p class="text-xs text-gray-300 font-semibold">An alumni association of ex-BUET students of 1986-87 session. A registered society under the registrar of joint stock companies & firms, Bangladesh. Reg no. S-11495</p>
+          </div>
+        </div>
+      </div>
+      <!-- MOBILE NAV ENDS -->
+      <!-- !!!!!!!!!!!!!!! -->
+      <!--
+      #######################################################
+      #######################################################
+      #######################################################
+      HEADER SECTION ENDS
+      #######################################################
+      #######################################################
+      #######################################################
+      -->
+      <!--
+      #######################################################
+      #######################################################
+      MAIN BODY SECTION STARTS 
+      #######################################################
+      #######################################################
+      -->
+      <main class="mt-20 min-h-[calc(100vh-5rem-10.8rem)]">
+        <!--
+        ==================================================== 
+        HERO SECTION STARTS
+        ==================================================== 
+        -->
+        <section class="hero m-0 p-0 mb-8">
+          <!-- Swiper -->
+          <div class="swiper heroSwiper w-full h-full ml-auto mr-auto">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="./assets/img/hero-slider/slider-img-1.jpg" class="swiper-slide-img" alt="" />
+                <div class="swiper-slide-textbox">
+                  <p class="text-lg lg:text-2xl xl:text-4xl">Forum 86</p>
+                  <span class="text-xs lg:text-sm xl:text-lg">An alumni association of Ex-BUET Students of 1986 - 1987 Session</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/hero-slider/slider-img-2.jpg" class="swiper-slide-img" alt="" />
+                <div class="swiper-slide-textbox">
+                  <p class="text-lg lg:text-2xl xl:text-4xl">Forum 86</p>
+                  <span class="text-xs lg:text-sm xl:text-lg">An alumni association of Ex-BUET Students of 1986 - 1987 Session</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/hero-slider/slider-img-3.jpg" class="swiper-slide-img" alt="" />
+                <div class="swiper-slide-textbox">
+                  <p class="text-lg lg:text-2xl xl:text-4xl">Forum 86</p>
+                  <span class="text-xs lg:text-sm xl:text-lg">An alumni association of Ex-BUET Students of 1986 - 1987 Session</span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/img/hero-slider/slider-img-4.jpg" class="swiper-slide-img" alt="" />
+                <div class="swiper-slide-textbox">
+                  <p class="text-lg lg:text-2xl xl:text-4xl">Forum 86</p>
+                  <span class="text-xs lg:text-sm xl:text-lg">An alumni association of Ex-BUET Students of 1986 - 1987 Session</span>
+                </div>
+              </div>
+            </div>
+            <button class="hero-slider-prev slider-control-btn left-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="6" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+            <button class="hero-slider-next slider-control-btn right-5">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="6" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!--
+        ==================================================== 
+        HERO SECTION ENDS
+        ==================================================== 
+        -->
+        <!--
+        ==================================================== 
+        ANNOUNCEMENT SECTION STARTS
+        ==================================================== 
+        -->
+        <section class="section announcement">
+          <div class="section-main">
+            <h2 class="section-header">Announcement</h2>
+            <img src="./assets/img/announcement/announcement.png" class="rounded-lg ring-2 ring-gray-700 dark:ring-purple-600 w-full shadow-sm" alt="" />
+          </div>
+        </section>
+        <!--
+        ==================================================== 
+        ANNOUNCEMENT SECTION ENDS
+        ==================================================== 
+        -->
+        <!--
+        ==================================================== 
+        AWARDS SECTION STARTS
+        ==================================================== 
+        -->
+        <section class="section-bg awards">
+          <div class="section-main">
+            <h2 class="section-header">Awards Ceremony</h2>
+            <h3 class="primary-header">Recipients of Forum 86 Research Excellence Awards 2020</h3>
+            <hr class="hr-primary" />
+            <div class="h-[30rem] mb-8">
+              <!-- Swiper STARTS -->
+              <div class="swiper awardsSwiper h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-1.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-2.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-3.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-4.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-5.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                  <div class="swiper-slide swiper-slide-awards rounded-lg overflow-hidden">
+                    <img src="./assets/img/awards-slider/awards-slider-6.jpg" class="swiper-slide-awards-img" alt="" />
+                  </div>
+                </div>
+                <button class="awards-slider-prev slider-control-btn left-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="6" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                  </svg>
+                </button>
+                <button class="awards-slider-next slider-control-btn right-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="6" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                  </svg>
+                </button>
+                <div class="swiper-pagination"></div>
+              </div>
+              <!-- Swiper ENDS -->
+            </div>
+            <div class="bg-slate-200 dark:bg-gray-900 p-6 rounded-lg shadow-md mb-8">
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-6">
+                FORUM 86 is a non-profit and non-political organization. Its members are those individuals who were enrolled as undergraduate students at Bangladesh University of Engineering and Technology (BUET) in the 1986-87 sessions. The organization is engaged in a wide spectrum of activities such as (but not limited to): providing cultural, intellectual, social, spiritual and charitable welfare to the members of Forum 86, providing welfare to BUET and the society, providing charity to the
+                needy people, encouraging research and innovation, facilitating technology transfer, and providing academic and professional assistance to BUET alumni and students. Since it's establishment, FORUM 86 has been promoting exchange of professional knowledge with a wide range of groups, organizations and individuals by arranging seminars, symposiums, etc. Since 2020, FORUM 86 started promoting research activities within BUET and beyond through a bi-annual “Research Excellence Award”
+                to BUET faculty members and students.
+              </p>
+              <a href="./research-excellence-awards.html" class="text-purple-500 font-bold text-xs hover:text-sm transition-all delay-200">Learn More...</a>
+            </div>
+            <div class="flex flex-col md:flex-row md:justify-between items-center gap-5">
+              <a href="./research-excellence-awards.html" class="default-btn bg-purple-600 text-gray-200 hover:bg-purple-500 transition-all delay-150 flex gap-3 items-center">
+                <span>
+                  <i class="fa-solid fa-award"></i>
+                </span>
+                <span>Research Excellence Awards</span>
+              </a>
+              <div class="flex flex-col md:flex-row items-center gap-3">
+                <span class="font-bold text-gray-700 dark:text-gray-300">Watch Award Ceremony on: </span>
+                <div class="text-3xl flex items-center gap-3">
+                  <div class="flex gap-2">
+                    <a href="https://www.facebook.com/Forum86-RE-Award-352263442508100"><img src="./assets/img/logo/facebook.png" class="h-8 rounded-md" alt="" /></a>
+                    <a href="https://www.youtube.com/@forum8634"><img src="./assets/img/logo/youtube.png" class="h-8 rounded-md" alt="" /></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--
+        ==================================================== 
+        AWARDS SECTION ENDS
+        ==================================================== 
+        -->
+        <!--
+        ==================================================== 
+        UNKNOWN SECTION STARTS
+        ==================================================== 
+        -->
+        <section class="section announcement">
+          <div class="section-main">
+            <h2 class="section-header">Unknown Section</h2>
+            <img src="./assets/img/announcement/announcement.png" class="rounded-lg ring-2 ring-gray-700 dark:ring-purple-600 w-full shadow-sm" alt="" />
+          </div>
+        </section>
+        <!--
+        ==================================================== 
+        UNKNOWN SECTION ENDS
+        ==================================================== 
+        -->
+      </main>
+      <!--
+      #######################################################
+      #######################################################
+      MAIN BODY SECTION ENDS 
+      #######################################################
+      #######################################################
+      -->
+      <!--
+      ==================================================== 
+      FOOTER SECTION STARTS
+      ==================================================== 
+      -->
+      <footer class="footer">
+        <div class="footer-main">
+          <div class="py-4 flex flex-col lg:flex-row justify-center lg:justify-between items-center gap-5">
+            <div>
+              <a href="./index.html"><img src="./assets/img/logo/FORUM86.png" class="h-20" alt="" /></a>
+            </div>
+            <div class="font-light flex flex-wrap gap-2 justify-center">
+              <a href="./index.html">Home</a>
+              <span>|</span>
+              <a href="./constitution.html">Constitution</a>
+              <span>|</span>
+              <a href="./present-executive-committee.html">Present Executive Committee</a>
+              <span>|</span>
+              <a href="./ex-executive-committee.html">Ex Executive Committee</a>
+              <span>|</span>
+              <a href="./activities.html">Activities</a>
+              <span>|</span>
+              <a href="./reunions.html">Reunions</a>
+              <span>|</span>
+              <a href="./souvenir.html">Souvenir</a>
+              <span>|</span>
+              <a href="./forum86usa.html">Forum86 USA</a>
+            </div>
+            <div class="flex flex-col gap-2 items-center">
+              <p class="text-sm text-center justify-center">Follow Us:</p>
+              <div class="flex gap-2">
+                <a href="https://www.facebook.com/Forum86-RE-Award-352263442508100"><img src="./assets/img/logo/facebook.png" class="h-8" alt="" /></a>
+                <a href="https://www.youtube.com/@forum8634"><img src="./assets/img/logo/youtube.png" class="h-8" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr class="border-gray-600" />
+        <div class="footer-bottom text-center p-2">
+          <p class="font-light mb-2">An alumni association of ex-BUET students of 1986-87 session. A registered society under the registrar of joint stock companies & firms, Bangladesh. Reg no. S-11495</p>
+          <p>Copyright &copy; 2022 | Forum86</p>
+        </div>
+      </footer>
+      <!--
+      ==================================================== 
+      FOOTER SECTION ENDS
+      ==================================================== 
+      -->
+    </div>
+    <!--
+    ######################################################### 
+    SCRIPT ATTACHMENTS STARTS HERE
+    ######################################################### 
+    -->
+    <!-- ALPINE JS -->
+    <script src="./assets/js/alpine.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="./assets/js/script.js"></script>
+    <!--
+    ######################################################### 
+    SCRIPT ATTACHMENTS ENDS HERE
+    ######################################################### 
+    -->
+  </body>
+</html>

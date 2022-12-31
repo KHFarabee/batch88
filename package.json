@@ -1,0 +1,23 @@
+{
+  "name": "forum-alumni",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/output.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KHFarabee/forum-alumni.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KHFarabee/forum-alumni/issues"
+  },
+  "homepage": "https://github.com/KHFarabee/forum-alumni#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}

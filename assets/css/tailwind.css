@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* SIDE NAV STARTS */
+  .mobile-nav {
+    @apply z-10;
+  }
+  .side-nav-list-border {
+    @apply border-b-2 border-gray-200 dark:border-gray-700;
+  }
+  .side-nav-link-active {
+    @apply flex items-center gap-3 px-4 py-4 font-extrabold text-purple-600 border-l-4 border-purple-600 uppercase;
+  }
+  .side-nav-link {
+    @apply flex items-center gap-3 px-4 py-4 font-bold border-l-4 border-transparent hover:text-purple-400 uppercase;
+  }
+  .side-nav-sub-link {
+    @apply flex items-center gap-3 px-4 py-2 font-bold border-l-4 border-transparent hover:text-purple-400;
+  }
+  .side-nav-sub-link-active {
+    @apply flex items-center gap-3 px-4 py-2 font-bold border-l-4 border-transparent text-purple-600;
+  }
+  /* SIDE NAV ENDS */
+  /* ####################################################### */
+  /* MAIN NAV STARTS */
+  .main-nav-ul {
+    @apply text-xs xl:text-sm;
+  }
+  .main-nav-link {
+    @apply flex items-center gap-2 font-bold py-1 border-b-[3px] border-transparent rounded-full hover:text-purple-400 uppercase relative;
+  }
+  .main-nav-link-active {
+    @apply flex items-center gap-2 font-bold py-1  text-purple-600 uppercase relative;
+  }
+
+  .main-nav-dropdown-link {
+    @apply px-4 py-2 block hover:text-purple-400;
+  }
+  /* MAIN NAV ENDS */
+  /* HERO SLIDER STARTS HERE */
+
+  .swiper-slide {
+    @apply text-center text-lg bg-white flex justify-center items-center relative;
+  }
+
+  .swiper-slide-img {
+    @apply block w-full h-[50vh] lg:h-[75vh] xl:h-[90vh] object-cover brightness-[.48];
+  }
+  .swiper-slide-awards-img {
+    @apply block w-full h-full;
+  }
+  .swiper-slide-activities-img {
+    @apply block max-h-screen;
+  }
+
+  .swiper-slide-textbox {
+    @apply absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 font-bold text-gray-200 w-[70%];
+  }
+  .slider-control-btn {
+    @apply absolute z-20 top-1/2 text-gray-300 bg-slate-800 bg-opacity-50 px-2 py-3 rounded-lg;
+  }
+  /* HERO SLIDER ENDS HERE */
+  .section {
+    @apply w-full px-4 py-16;
+  }
+  .section-bg {
+    @apply w-full px-4 py-16 bg-gray-100 dark:bg-slate-800 shadow-sm;
+  }
+
+  .section-main {
+    @apply w-full xl:w-[75rem] mx-auto;
+  }
+  .section-header {
+    @apply text-lg sm:text-xl md:text-2xl font-bold mb-5 text-center text-gray-700 dark:text-gray-300 uppercase;
+  }
+  .primary-header {
+    @apply text-lg uppercase font-semibold text-center mb-5 text-gray-700 dark:text-gray-300;
+  }
+  .secondary-header {
+    @apply text-sm font-extrabold;
+  }
+  .default-btn {
+    @apply inline-block px-4 py-3 text-sm font-bold rounded-lg;
+  }
+  .footer {
+    @apply w-full bg-gray-700 text-xs text-gray-300;
+  }
+  .footer-main {
+    @apply w-full xl:w-[75rem] mx-auto font-semibold py-1 px-4;
+  }
+  .footer-bottom {
+    @apply w-full text-xs text-gray-300 font-bold py-1;
+  }
+
+  .default-card {
+    @apply shadow-sm bg-gray-100 dark:bg-gray-800 p-3 rounded-md;
+  }
+  .default-card-details {
+    @apply text-sm sm:text-xs font-extrabold text-center py-1;
+  }
+  .small-white-container {
+    @apply bg-slate-100 dark:bg-gray-800 p-6 rounded-lg shadow-md mb-8;
+  }
+}
+
+@layer utilities {
+  .hr-primary {
+    @apply mb-3 rounded-full border-slate-200 dark:border-gray-700;
+  }
+
+  .main-nav-link::after {
+    @apply content-[''] absolute top-full left-0 h-[3px] bg-purple-400 w-[0%] rounded-full duration-300;
+  }
+  .main-nav-link-active::after {
+    @apply content-[''] absolute top-full left-0 h-[3px] bg-purple-600 w-[100%] rounded-full;
+  }
+  .main-nav-link:hover::after {
+    @apply w-full;
+  }
+}
